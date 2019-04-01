@@ -96,7 +96,7 @@ void Game::InitializeScene()
      */
     
     orderInLayer += 0.001;
-    rainEffect = new RainEffect("tree", 1.5f);
+    rainEffect = new RainEffect("", 1.5f);
     rainEffect->setPosition({0 , orderInLayer, 0.0});
     rainEffect->setRotation(1.57);
     rainEffect->setScale({3.2, 0, 5.4});
