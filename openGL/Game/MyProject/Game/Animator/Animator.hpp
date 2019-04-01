@@ -22,7 +22,7 @@ struct pixelInfo{
     IvVector2 uv;
     IvVector4 color;
     IvVector3 lightPos = {0, 0, 0};
-    IvVector4 lightCol = {1, 1, 0.1, 1};
+    IvVector4 lightCol = {1, 0.1, 0.1, 1};
 };
 
 class Animator
