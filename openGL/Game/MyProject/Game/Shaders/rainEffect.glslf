@@ -23,7 +23,7 @@ vec2 res = vec2(100.,100.);
 vec2 st = gl_FragCoord.xy/res;
 st.x *= res.x/res.y;
 
-vec2 grid = vec2(170.0,50.);
+vec2 grid = vec2(170.0,150.);
 st *= grid;
 
 vec2 ipos = floor(st);  // integer
