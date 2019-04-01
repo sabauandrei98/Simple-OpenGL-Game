@@ -1,37 +1,5 @@
-//===============================================================================
-// @ Game.cpp
-// ------------------------------------------------------------------------------
-// Game core routines
-//
-// Copyright (C) 2008-2015 by James M. Van Verth and Lars M. Bishop.
-// All rights reserved.
-//
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-//
-//===============================================================================
-
-//-------------------------------------------------------------------------------
-//-- Dependencies ---------------------------------------------------------------
-//-------------------------------------------------------------------------------
-
 #include "Game.hpp"
 
-
-
-//-------------------------------------------------------------------------------
-//-- Static Members -------------------------------------------------------------
-//-------------------------------------------------------------------------------
-
-//-------------------------------------------------------------------------------
-//-- Methods --------------------------------------------------------------------
-//-------------------------------------------------------------------------------
-
-//-------------------------------------------------------------------------------
-// @ IvGame::Create()
-//-------------------------------------------------------------------------------
-// Static constructor
-//-------------------------------------------------------------------------------
 bool
 IvGame::Create()
 {
@@ -87,13 +55,12 @@ void Game::InitializeScene()
     daynight->setRotation(1.57);
     daynight->setScale({1.52f, 0, 2.7});
     
-    /*
+    
     orderInLayer += 0.001;
     rain = new SceneObject("rain", 3.0f);
     rain->setPosition({0 , orderInLayer, 0});
     rain->setRotation(1.57);
     rain->setScale({1.6f, 0, 2.8f});
-     */
     
     orderInLayer += 0.001;
     rainEffect = new RainEffect("", 1.5f);
@@ -149,7 +116,6 @@ void Game::InitializeScene()
     
     
     
-    
     orderInLayer += 0.001;
     shadow = new SceneObject("shadow", 1.5f);
     shadow->setPosition({-6.9 , orderInLayer, 2.20});
@@ -165,17 +131,12 @@ void Game::InitializeScene()
     
     
     
-    
-     
-
-    
     orderInLayer += 0.001;
     background = new SceneObject("background", 3.0f);
     background->setPosition({0 , orderInLayer, 0});
     background->setRotation(1.57);
     background->setScale({1.52f, 0, 2.7});
     
-    //light = new Light();
 }
 
 
@@ -211,8 +172,8 @@ Game::PostRendererInitialize()
 void
 Game::UpdateObjects( float dt )
 {
-    // update player
-     mPlayer->Update( dt );
+
+    mPlayer->Update( dt );
     enemy->Update(dt);
     enemy1->Update(dt);
     enemy2->Update(dt);
@@ -227,16 +188,10 @@ Game::UpdateObjects( float dt )
 //-------------------------------------------------------------------------------
 void 
 Game::Render()                                  // Here's Where We Do All The Drawing
-{   
-    // set up viewer
-    //x y z
-    //y = -10
+{
     IvSetDefaultViewer(0.0f , -10.0f, 0.0f);
 
-    // draw coordinate axes
-    //IvDrawAxes();
-
-
+    
     background ->Render();
 
     shadow->Render();

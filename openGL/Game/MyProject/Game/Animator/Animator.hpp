@@ -22,7 +22,7 @@ struct pixelInfo{
     IvVector2 uv;
     IvVector4 color;
     IvVector3 lightPos = {0, 0, 0};
-    IvVector4 lightCol = {1, 1, 1, 1};
+    IvVector4 lightCol = {1, 0.1, 0.1, 1};
 };
 
 class Animator
@@ -30,22 +30,17 @@ class Animator
 public:
     Animator(const std::string& tag, const std::string& state);
     virtual ~Animator(){};
-    
     pixelInfo getNextAnimation(const std::string& tag, const std::string& state);
 
 private:
     
     int currentIndex = 0;
+    int fireIndex = 0;
     float zombieOffsetFrame = 0;
     float frameOffset = 0;
-    std::string state = "";
     bool addValue = true;
-    std::vector<IvTexture*> textures;
-    IvVector2 uv;
-    
-    float lightPos = -5.0f;
     bool addValueLight = true;
-    int fireIndex = 0;
+    std::vector<IvTexture*> textures;
     
     void initializeBackground();
     void initializeRain();
@@ -55,7 +50,6 @@ private:
     void initializeTree();
     void initializeDaynight();
     void initializeFire();
-    
     
     void addTexture(const std::string& spriteName);
     

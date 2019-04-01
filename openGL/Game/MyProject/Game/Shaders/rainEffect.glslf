@@ -3,8 +3,6 @@
 uniform float u_time;
 out vec4 fragColor;
 uniform vec4 myCol;
-//uniform sampler2D myTex;
-//in vec2 uv;
 
 float random (in float x) {
 return fract(sin(x)*1e4);

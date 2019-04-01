@@ -108,7 +108,6 @@ pixelInfo Animator::getNextBackgroundAnimation()
 }
 
 
-
 pixelInfo Animator::getNextDaynightAnimation()
 {
     if(frameOffset >= 1)

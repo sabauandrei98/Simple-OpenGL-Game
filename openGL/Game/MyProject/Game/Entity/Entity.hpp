@@ -1,22 +1,5 @@
-//===============================================================================
-// @ Player.h
-// ------------------------------------------------------------------------------
-// Player object
-//
-// Copyright (C) 2008-2015 by James M. Van Verth and Lars M. Bishop.
-// All rights reserved.
-//
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-//
-//===============================================================================
-
 #ifndef __Entity__
 #define __Entity__
-
-//-------------------------------------------------------------------------------
-//-- Dependencies ---------------------------------------------------------------
-//-------------------------------------------------------------------------------
 
 #include <IvMatrix44.h>
 #include <IvRenderer.h>
@@ -27,11 +10,6 @@
 #include <IvGame.h>
 #include "../Shape/Shape.hpp"
 #include "../Animator/Animator.hpp"
-
-
-//-------------------------------------------------------------------------------
-//-- Classes --------------------------------------------------------------------
-//-------------------------------------------------------------------------------
 
 class Entity
 {
@@ -52,11 +30,9 @@ protected:
     std::string ENTITY_STATE = "";
     float ENTITY_RADIUS;
     
-    
     IvMatrix44 transform;
     Shape shapeRenderer;
 
-    
 };
 
 #endif

@@ -1,6 +1,4 @@
 //
-//  WorldObject.hpp
-//  Game
 //
 //  Created by Andrei Sabu - (p) on 3/28/19.
 //

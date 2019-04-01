@@ -6,11 +6,8 @@ layout(location = TEXCOORD0) in vec2 texCoord;
 
 out vec2 uv;
 
-
 void main()
 {
 uv = texCoord.xy;
-
 gl_Position = IvModelViewProjectionMatrix * myTransform * vec4(position,1.0);
-
 }

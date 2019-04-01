@@ -14,6 +14,7 @@ uniform vec4 lightColor;
 void main()
 {
 float q = lightIntensity;
-vec4 color = vec4(lightAttenuation * q, lightAttenuation * q , lightAttenuation * q , 0.6) * myColor * lightColor;
+float col = lightAttenuation * q;
+vec4 color = vec4(col, col, col , 0.6) * myColor * lightColor;
 fragColor = color * texture(myTexture,fract(vec2(uv.x + uvX, uv.y + uvY)));
 }

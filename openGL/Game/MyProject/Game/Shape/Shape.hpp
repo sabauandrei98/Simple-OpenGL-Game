@@ -61,12 +61,10 @@ private:
     void intializeShader(const string& objectTag);
     
     void intializeShapeSquare(float distFromCenter);
-    void dealocateBuffers();
     float getAttenuationFromDistance(IvVector3 a, IvVector3 b);
     
     bool addValueLight;
     float lightPos = 5.0f;
-    
     void animateLight();
     
 public:

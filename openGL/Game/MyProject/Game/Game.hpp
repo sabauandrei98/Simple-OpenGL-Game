@@ -1,16 +1,3 @@
-//===============================================================================
-// @ Game.h
-// ------------------------------------------------------------------------------
-// Game core
-//
-// Copyright (C) 2008-2015 by James M. Van Verth and Lars M. Bishop.
-// All rights reserved.
-//
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-//
-//===============================================================================
-
 #ifndef __GameDefs__
 #define __GameDefs__
 
@@ -41,21 +28,22 @@ public:
     bool PostRendererInitialize();
 
     Player*         mPlayer;
-    SceneObject*          background;
-    SceneObject*         rain;
+    
     Enemy*        enemy;
     Enemy*        enemy1;
     Enemy*        enemy2;
     Enemy*        enemy3;
+    
     SceneObject*        shadow;
     SceneObject*        daynight;
-    SceneObject* tree;
-    SceneObject* fire;
-    RainEffect* rainEffect;
-    
+    SceneObject*        tree;
+    SceneObject*        fire;
+    SceneObject*        background;
+    SceneObject*        rain;
     SceneObject*        tree1;
     SceneObject*        shadow1;
-    //Light* light;
+    
+    RainEffect* rainEffect;
 
 protected:
     virtual void UpdateObjects( float dt );

@@ -6,7 +6,6 @@ layout(location = TEXCOORD0) in vec2 texCoord;
 
 out vec2 uv;
 
-
 void main()
 {
 uv = texCoord.xy;

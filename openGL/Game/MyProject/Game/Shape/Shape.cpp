@@ -92,13 +92,11 @@ void Shape::Draw(IvMatrix44& transformPos, pixelInfo p)
     uniTexture=mShader->GetUniform("myTexture");
     uniTexture->SetValue(p.texture);
     
-    
     uniColor=mShader->GetUniform("myColor");
     uniColor->SetValue(p.color,0);
     
     uniLightColor=mShader->GetUniform("lightColor");
     uniLightColor->SetValue(p.lightCol,0);
-    
     
     uniTransform=mShader->GetUniform("myTransform");
     uniTransform->SetValue(transformPos,0);
@@ -106,10 +104,8 @@ void Shape::Draw(IvMatrix44& transformPos, pixelInfo p)
     uniLightIntensity=mShader->GetUniform("lightIntensity");
     uniLightIntensity->SetValue(lightPos/10.0f,0);
     
-    float result = getAttenuationFromDistance({transformPos[12], transformPos[13], transformPos[14]}, p.lightPos);
-    
     uniLightPos=mShader->GetUniform("lightAttenuation");
-    uniLightPos->SetValue(result,0);
+    uniLightPos->SetValue(getAttenuationFromDistance({transformPos[12], transformPos[13], transformPos[14]}, p.lightPos),0);
     
     uniUvX=mShader->GetUniform("uvX");
     uniUvX->SetValue(p.uv.x,0);
@@ -124,21 +120,5 @@ void Shape::Draw(IvMatrix44& transformPos, pixelInfo p)
     
 }
 
-void Shape::dealocateBuffers()
-{
-    if (vertexBuffer != 0) {
-        IvRenderer::mRenderer->GetResourceManager()->Destroy(vertexBuffer);
-        vertexBuffer = 0;
-    }
-    
-    if (indexBuffer != 0) {
-        IvRenderer::mRenderer->GetResourceManager()->Destroy(indexBuffer);
-        indexBuffer = 0;
-    }
-}
-
-Shape::~Shape()
-{
-    //dealocateBuffers();
-}
+Shape::~Shape(){}
  

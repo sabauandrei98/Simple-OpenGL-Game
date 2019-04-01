@@ -11,7 +11,5 @@ void main()
 {
 uv = texCoord.xy;
 pos = position;
-
 gl_Position = IvModelViewProjectionMatrix * myTransform * vec4(position,1.0);
-
 }

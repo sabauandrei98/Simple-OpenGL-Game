@@ -16,7 +16,5 @@ void main()
 {
 float p = lightAttenuation;
 float q = lightIntensity;
-vec4 r = lightColor;
-fragColor = myColor * texture(myTexture,fract(vec2(uv.x + uvX, uv.y + uvY)));
-
+fragColor = myColor * lightColor * texture(myTexture,fract(vec2(uv.x + uvX, uv.y + uvY)));
 }
