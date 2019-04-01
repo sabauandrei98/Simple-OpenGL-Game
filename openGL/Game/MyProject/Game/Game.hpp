@@ -50,6 +50,7 @@ public:
     SceneObject*        shadow;
     SceneObject*        daynight;
     SceneObject* tree;
+    SceneObject* fire;
     RainEffect* rainEffect;
     
     SceneObject*        tree1;

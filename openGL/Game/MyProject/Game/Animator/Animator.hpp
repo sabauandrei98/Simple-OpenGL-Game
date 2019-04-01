@@ -22,7 +22,7 @@ struct pixelInfo{
     IvVector2 uv;
     IvVector4 color;
     IvVector3 lightPos = {0, 0, 0};
-    IvVector4 lightCol = {1, 0.1, 0.1, 1};
+    IvVector4 lightCol = {1, 1, 1, 1};
 };
 
 class Animator
@@ -45,6 +45,7 @@ private:
     
     float lightPos = -5.0f;
     bool addValueLight = true;
+    int fireIndex = 0;
     
     void initializeBackground();
     void initializeRain();
@@ -53,8 +54,8 @@ private:
     void initializeShadow();
     void initializeTree();
     void initializeDaynight();
+    void initializeFire();
     
-    void animateLight();
     
     void addTexture(const std::string& spriteName);
     
@@ -65,6 +66,7 @@ private:
     pixelInfo getNextShadowAnimation();
     pixelInfo getNextTreeAnimation();
     pixelInfo getNextDaynightAnimation();
+    pixelInfo getNextFireAnimation();
 };
 
 #endif /* Animator_hpp */

@@ -75,6 +75,26 @@
 		0193F4A6224E7F9F000EF8B5 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0193F4A4224E7F9F000EF8B5 /* Enemy.cpp */; };
 		0193F4A9224E815F000EF8B5 /* zombie1.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0193F4A7224E8157000EF8B5 /* zombie1.tga */; };
 		0193F4AA224E815F000EF8B5 /* zombie2.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0193F4A8224E8157000EF8B5 /* zombie2.tga */; };
+		01AAFDAE2252283200472426 /* fire.glslf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDAC2252282400472426 /* fire.glslf */; };
+		01AAFDAF2252283200472426 /* fire.glslv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDAD2252282500472426 /* fire.glslv */; };
+		01AAFDC422522B5800472426 /* fire1.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBA22522B3F00472426 /* fire1.tga */; };
+		01AAFDC522522B5800472426 /* fire2.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBD22522B4000472426 /* fire2.tga */; };
+		01AAFDC622522B5800472426 /* fire3.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB722522B3F00472426 /* fire3.tga */; };
+		01AAFDC722522B5800472426 /* fire4.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDC322522B4100472426 /* fire4.tga */; };
+		01AAFDC822522B5800472426 /* fire5.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB222522B3D00472426 /* fire5.tga */; };
+		01AAFDC922522B5800472426 /* fire8.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB922522B3F00472426 /* fire8.tga */; };
+		01AAFDCA22522B5800472426 /* fire9.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB322522B3E00472426 /* fire9.tga */; };
+		01AAFDCB22522B5800472426 /* fire10.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBC22522B4000472426 /* fire10.tga */; };
+		01AAFDCC22522B5800472426 /* fire11.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBB22522B3F00472426 /* fire11.tga */; };
+		01AAFDCD22522B5800472426 /* fire12.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB422522B3E00472426 /* fire12.tga */; };
+		01AAFDCE22522B5800472426 /* fire13.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB522522B3E00472426 /* fire13.tga */; };
+		01AAFDCF22522B5800472426 /* fire14.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBE22522B4000472426 /* fire14.tga */; };
+		01AAFDD022522B5800472426 /* fire15.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDC022522B4000472426 /* fire15.tga */; };
+		01AAFDD122522B5800472426 /* fire16.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDBF22522B4000472426 /* fire16.tga */; };
+		01AAFDD222522B5800472426 /* fire17.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB622522B3F00472426 /* fire17.tga */; };
+		01AAFDD322522B5800472426 /* fire18.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDB822522B3F00472426 /* fire18.tga */; };
+		01AAFDD422522B5800472426 /* fire19.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDC122522B4100472426 /* fire19.tga */; };
+		01AAFDD522522B5800472426 /* fire20.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AAFDC222522B4100472426 /* fire20.tga */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +219,26 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				01AAFDC422522B5800472426 /* fire1.tga in CopyFiles */,
+				01AAFDC522522B5800472426 /* fire2.tga in CopyFiles */,
+				01AAFDC622522B5800472426 /* fire3.tga in CopyFiles */,
+				01AAFDC722522B5800472426 /* fire4.tga in CopyFiles */,
+				01AAFDC822522B5800472426 /* fire5.tga in CopyFiles */,
+				01AAFDC922522B5800472426 /* fire8.tga in CopyFiles */,
+				01AAFDCA22522B5800472426 /* fire9.tga in CopyFiles */,
+				01AAFDCB22522B5800472426 /* fire10.tga in CopyFiles */,
+				01AAFDCC22522B5800472426 /* fire11.tga in CopyFiles */,
+				01AAFDCD22522B5800472426 /* fire12.tga in CopyFiles */,
+				01AAFDCE22522B5800472426 /* fire13.tga in CopyFiles */,
+				01AAFDCF22522B5800472426 /* fire14.tga in CopyFiles */,
+				01AAFDD022522B5800472426 /* fire15.tga in CopyFiles */,
+				01AAFDD122522B5800472426 /* fire16.tga in CopyFiles */,
+				01AAFDD222522B5800472426 /* fire17.tga in CopyFiles */,
+				01AAFDD322522B5800472426 /* fire18.tga in CopyFiles */,
+				01AAFDD422522B5800472426 /* fire19.tga in CopyFiles */,
+				01AAFDD522522B5800472426 /* fire20.tga in CopyFiles */,
+				01AAFDAE2252283200472426 /* fire.glslf in CopyFiles */,
+				01AAFDAF2252283200472426 /* fire.glslv in CopyFiles */,
 				0193F4A9224E815F000EF8B5 /* zombie1.tga in CopyFiles */,
 				0193F4AA224E815F000EF8B5 /* zombie2.tga in CopyFiles */,
 				0193F49D224CF3ED000EF8B5 /* rainEffect.glslf in CopyFiles */,
@@ -278,6 +318,26 @@
 		0193F4A5224E7F9F000EF8B5 /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Enemy.hpp; sourceTree = "<group>"; };
 		0193F4A7224E8157000EF8B5 /* zombie1.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = zombie1.tga; sourceTree = "<group>"; };
 		0193F4A8224E8157000EF8B5 /* zombie2.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = zombie2.tga; sourceTree = "<group>"; };
+		01AAFDAC2252282400472426 /* fire.glslf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fire.glslf; sourceTree = "<group>"; };
+		01AAFDAD2252282500472426 /* fire.glslv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fire.glslv; sourceTree = "<group>"; };
+		01AAFDB222522B3D00472426 /* fire5.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire5.tga; sourceTree = "<group>"; };
+		01AAFDB322522B3E00472426 /* fire9.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire9.tga; sourceTree = "<group>"; };
+		01AAFDB422522B3E00472426 /* fire12.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire12.tga; sourceTree = "<group>"; };
+		01AAFDB522522B3E00472426 /* fire13.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire13.tga; sourceTree = "<group>"; };
+		01AAFDB622522B3F00472426 /* fire17.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire17.tga; sourceTree = "<group>"; };
+		01AAFDB722522B3F00472426 /* fire3.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire3.tga; sourceTree = "<group>"; };
+		01AAFDB822522B3F00472426 /* fire18.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire18.tga; sourceTree = "<group>"; };
+		01AAFDB922522B3F00472426 /* fire8.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire8.tga; sourceTree = "<group>"; };
+		01AAFDBA22522B3F00472426 /* fire1.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire1.tga; sourceTree = "<group>"; };
+		01AAFDBB22522B3F00472426 /* fire11.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire11.tga; sourceTree = "<group>"; };
+		01AAFDBC22522B4000472426 /* fire10.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire10.tga; sourceTree = "<group>"; };
+		01AAFDBD22522B4000472426 /* fire2.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire2.tga; sourceTree = "<group>"; };
+		01AAFDBE22522B4000472426 /* fire14.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire14.tga; sourceTree = "<group>"; };
+		01AAFDBF22522B4000472426 /* fire16.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire16.tga; sourceTree = "<group>"; };
+		01AAFDC022522B4000472426 /* fire15.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire15.tga; sourceTree = "<group>"; };
+		01AAFDC122522B4100472426 /* fire19.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire19.tga; sourceTree = "<group>"; };
+		01AAFDC222522B4100472426 /* fire20.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire20.tga; sourceTree = "<group>"; };
+		01AAFDC322522B4100472426 /* fire4.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire4.tga; sourceTree = "<group>"; };
 		CEEFF78D1B7FB311006B1B1A /* IvCollision.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IvCollision.xcodeproj; path = IvCollision/IvCollision.xcodeproj; sourceTree = "<group>"; };
 		CEEFF7931B7FB31C006B1B1A /* IvCurves.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IvCurves.xcodeproj; path = IvCurves/IvCurves.xcodeproj; sourceTree = "<group>"; };
 		CEEFF7991B7FB326006B1B1A /* IvEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IvEngine.xcodeproj; path = IvEngine/IvEngine.xcodeproj; sourceTree = "<group>"; };
@@ -368,6 +428,8 @@
 		0193F4482248FBEE000EF8B5 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				01AAFDAC2252282400472426 /* fire.glslf */,
+				01AAFDAD2252282500472426 /* fire.glslv */,
 				0193F49B224CF3DB000EF8B5 /* rainEffect.glslf */,
 				0193F49C224CF3DB000EF8B5 /* rainEffect.glslv */,
 				0193F493224CDE5D000EF8B5 /* daynight.glslf */,
@@ -391,6 +453,24 @@
 		0193F44D224A287B000EF8B5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				01AAFDBA22522B3F00472426 /* fire1.tga */,
+				01AAFDBD22522B4000472426 /* fire2.tga */,
+				01AAFDB722522B3F00472426 /* fire3.tga */,
+				01AAFDC322522B4100472426 /* fire4.tga */,
+				01AAFDB222522B3D00472426 /* fire5.tga */,
+				01AAFDB922522B3F00472426 /* fire8.tga */,
+				01AAFDB322522B3E00472426 /* fire9.tga */,
+				01AAFDBC22522B4000472426 /* fire10.tga */,
+				01AAFDBB22522B3F00472426 /* fire11.tga */,
+				01AAFDB422522B3E00472426 /* fire12.tga */,
+				01AAFDB522522B3E00472426 /* fire13.tga */,
+				01AAFDBE22522B4000472426 /* fire14.tga */,
+				01AAFDC022522B4000472426 /* fire15.tga */,
+				01AAFDBF22522B4000472426 /* fire16.tga */,
+				01AAFDB622522B3F00472426 /* fire17.tga */,
+				01AAFDB822522B3F00472426 /* fire18.tga */,
+				01AAFDC122522B4100472426 /* fire19.tga */,
+				01AAFDC222522B4100472426 /* fire20.tga */,
 				0193F4A7224E8157000EF8B5 /* zombie1.tga */,
 				0193F4A8224E8157000EF8B5 /* zombie2.tga */,
 				0193F491224CDE55000EF8B5 /* daynight.tga */,

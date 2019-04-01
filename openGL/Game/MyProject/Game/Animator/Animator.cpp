@@ -40,12 +40,26 @@ Animator::Animator(const std::string& tag, const std::string& state)
     {
         initializeDaynight();
     }
+    
+    if (tag == "fire")
+    {
+        initializeFire();
+    }
 }
 
 
 void Animator::initializeBackground()
 {
     addTexture("background.tga");
+}
+
+void Animator::initializeFire()
+{
+    for(int i = 1; i <= 20; i++)
+    {
+        addTexture("fire" + std::to_string(i) + ".tga");
+    }
+
 }
 
 void Animator::initializeShadow()
@@ -93,18 +107,7 @@ pixelInfo Animator::getNextBackgroundAnimation()
     return p;
 }
 
-void Animator::animateLight()
-{
-    if (lightPos < -5.0f)
-        addValueLight = true;
-    if(lightPos > 5.0f)
-        addValueLight = false;
-    
-    if(addValueLight)
-        lightPos += 0.01f;
-    else
-        lightPos -= 0.01f;
-}
+
 
 pixelInfo Animator::getNextDaynightAnimation()
 {
@@ -204,6 +207,20 @@ pixelInfo Animator::getNextRainAnimation()
     
 }
 
+pixelInfo Animator::getNextFireAnimation()
+{
+    fireIndex += 1;
+    
+    pixelInfo p;
+    fireIndex %= 270;
+    int index = fireIndex / 15;
+    p.texture = textures[index];
+    
+    p.uv = {1, 1};
+    p.color = {1.0,1.0,1.0,1.0};
+    return p;
+}
+
 pixelInfo Animator::getNextAnimation(const std::string& tag, const std::string& state)
 {
     if (tag == "rain")
@@ -223,6 +240,9 @@ pixelInfo Animator::getNextAnimation(const std::string& tag, const std::string& 
     
     if (tag == "daynight")
         return getNextDaynightAnimation();
+    
+    if(tag == "fire")
+        return getNextFireAnimation();
     
     return getNextBackgroundAnimation();
 }

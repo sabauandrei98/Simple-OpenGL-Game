@@ -87,17 +87,20 @@ void Game::InitializeScene()
     daynight->setRotation(1.57);
     daynight->setScale({1.52f, 0, 2.7});
     
+    /*
+    orderInLayer += 0.001;
+    rain = new SceneObject("rain", 3.0f);
+    rain->setPosition({0 , orderInLayer, 0});
+    rain->setRotation(1.57);
+    rain->setScale({1.6f, 0, 2.8f});
+     */
+    
     orderInLayer += 0.001;
     rainEffect = new RainEffect("tree", 1.5f);
     rainEffect->setPosition({0 , orderInLayer, 0.0});
     rainEffect->setRotation(1.57);
     rainEffect->setScale({3.2, 0, 5.4});
     
-    orderInLayer += 0.001;
-    rain = new SceneObject("rain", 3.0f);
-    rain->setPosition({0 , orderInLayer, 0});
-    rain->setRotation(1.57);
-    rain->setScale({1.6f, 0, 2.8f});
     
     
     orderInLayer += 0.001;
@@ -111,6 +114,11 @@ void Game::InitializeScene()
     tree1->setRotation(4.71);
     
     
+    orderInLayer += 0.001;
+    fire = new SceneObject("fire", 0.5f);
+    fire->setPosition({-3 , orderInLayer, -2.5});
+    fire->setRotation(1.57);
+    fire->setScale({1.5, 0, 1.5});
     
     orderInLayer += 0.001;
     mPlayer = new Player("player", 0.5f);
@@ -240,12 +248,13 @@ Game::Render()                                  // Here's Where We Do All The Dr
     enemy->Render();
 
     mPlayer->Render();
+    fire->Render();
 
     tree1->Render();
     tree->Render();
     rainEffect->Render();
     
-    rain->Render();
+    //rain->Render();
 
     daynight->Render();
 }
