@@ -29,15 +29,15 @@ void RainEffect::Entity(const std::string& tag, float radius)
 
 void RainEffect::Draw(IvMatrix44& transformPos, pixelInfo p)
 {
-    
-    uniTransform=mShader->GetUniform("myTransform");
+   
+    IvUniform* uniTransform=mShader->GetUniform("myTransform");
     uniTransform->SetValue(transformPos,0);
     
     myTime += 0.004;
-    uniTime=mShader->GetUniform("u_time");
+    IvUniform* uniTime=mShader->GetUniform("u_time");
     uniTime->SetValue(myTime,0);
     
-    uniColor=mShader->GetUniform("myCol");
+    IvUniform* uniColor=mShader->GetUniform("myCol");
     uniColor->SetValue(p.lightCol, 0);
     
     
@@ -75,10 +75,11 @@ void RainEffect::intializeShader(const string& objectTag)
     mShader = IvRenderer::mRenderer->GetResourceManager()->CreateShaderProgram( IvRenderer::mRenderer->GetResourceManager()->CreateVertexShaderFromFile("rainEffect"),
                                                                                IvRenderer::mRenderer->GetResourceManager()->CreateFragmentShaderFromFile("rainEffect"));
     
+ 
     unsigned int numVerts = (unsigned int)vertices.size();
     unsigned int numIndices =(unsigned int) indices.size();
-    dataPtr = (IvTCPVertex*)IvStackAllocator::mScratchAllocator->Allocate(kIvVFSize[kTCPFormat] * numVerts);
-    indexPtr = (UInt32*)IvStackAllocator::mScratchAllocator->Allocate(sizeof(UInt32)* numIndices);
+    IvTCPVertex* dataPtr = (IvTCPVertex*)IvStackAllocator::mScratchAllocator->Allocate(kIvVFSize[kTCPFormat] * numVerts);
+    UInt32* indexPtr = (UInt32*)IvStackAllocator::mScratchAllocator->Allocate(sizeof(UInt32)* numIndices);
     
     vector<IvVector2> textCoords;
     textCoords.push_back(IvVector2(0,0));

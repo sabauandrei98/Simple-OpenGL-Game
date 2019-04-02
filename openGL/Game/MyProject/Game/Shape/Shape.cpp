@@ -20,8 +20,8 @@ void Shape::intializeShader(const string& objectTag)
     
     unsigned int numVerts = (unsigned int)vertices.size();
     unsigned int numIndices =(unsigned int) indices.size();
-    dataPtr = (IvTCPVertex*)IvStackAllocator::mScratchAllocator->Allocate(kIvVFSize[kTCPFormat] * numVerts);
-    indexPtr = (UInt32*)IvStackAllocator::mScratchAllocator->Allocate(sizeof(UInt32)* numIndices);
+    IvTCPVertex* dataPtr = (IvTCPVertex*)IvStackAllocator::mScratchAllocator->Allocate(kIvVFSize[kTCPFormat] * numVerts);
+    UInt32* indexPtr = (UInt32*)IvStackAllocator::mScratchAllocator->Allocate(sizeof(UInt32)* numIndices);
     
     vector<IvVector2> textCoords;
     textCoords.push_back(IvVector2(0,0));
@@ -40,7 +40,7 @@ void Shape::intializeShader(const string& objectTag)
     
     vertexBuffer = IvRenderer::mRenderer->GetResourceManager()->CreateVertexBuffer(kTCPFormat, numVerts, dataPtr, kImmutableUsage);
     indexBuffer = IvRenderer::mRenderer->GetResourceManager()->CreateIndexBuffer(numIndices, indexPtr, kImmutableUsage);
-    
+
 }
 
 
@@ -87,30 +87,31 @@ void Shape::Draw(IvMatrix44& transformPos, pixelInfo p)
 {
     
     animateLight();
+
     
     //DEFINE UNIFORMS
-    uniTexture=mShader->GetUniform("myTexture");
+    IvUniform* uniTexture=mShader->GetUniform("myTexture");
     uniTexture->SetValue(p.texture);
     
-    uniColor=mShader->GetUniform("myColor");
+    IvUniform* uniColor=mShader->GetUniform("myColor");
     uniColor->SetValue(p.color,0);
     
-    uniLightColor=mShader->GetUniform("lightColor");
+    IvUniform* uniLightColor=mShader->GetUniform("lightColor");
     uniLightColor->SetValue(p.lightCol,0);
     
-    uniTransform=mShader->GetUniform("myTransform");
+    IvUniform* uniTransform=mShader->GetUniform("myTransform");
     uniTransform->SetValue(transformPos,0);
     
-    uniLightIntensity=mShader->GetUniform("lightIntensity");
+    IvUniform* uniLightIntensity=mShader->GetUniform("lightIntensity");
     uniLightIntensity->SetValue(lightPos/10.0f,0);
     
-    uniLightPos=mShader->GetUniform("lightAttenuation");
+    IvUniform* uniLightPos=mShader->GetUniform("lightAttenuation");
     uniLightPos->SetValue(getAttenuationFromDistance({transformPos[12], transformPos[13], transformPos[14]}, p.lightPos),0);
     
-    uniUvX=mShader->GetUniform("uvX");
+    IvUniform* uniUvX=mShader->GetUniform("uvX");
     uniUvX->SetValue(p.uv.x,0);
     
-    uniUvY=mShader->GetUniform("uvY");
+    IvUniform* uniUvY=mShader->GetUniform("uvY");
     uniUvY->SetValue(p.uv.y,0);
     
     IvRenderer::mRenderer->SetShaderProgram(mShader);

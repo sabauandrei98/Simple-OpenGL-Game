@@ -57,13 +57,7 @@ private:
     
     IvShaderProgram* mShader;
     
-    IvUniform* uniColor;
-    IvUniform* uniTransform;
-    IvUniform* uniTime;
     float myTime = 0;
-    
-    IvTCPVertex* dataPtr;
-    UInt32* indexPtr;
     
     void initializeShape(const string& shapeType, float shapeRadius);
     void intializeShader(const string& objectTag);

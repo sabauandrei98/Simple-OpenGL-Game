@@ -45,18 +45,6 @@ private:
     
     IvShaderProgram* mShader;
     
-    IvUniform* uniColor;
-    IvUniform* uniTransform;
-    IvUniform* uniTexture;
-    IvUniform* uniUvX;
-    IvUniform* uniUvY;
-    IvUniform* uniLightPos;
-    IvUniform* uniLightIntensity;
-    IvUniform* uniLightColor;
-    
-    IvTCPVertex* dataPtr;
-    UInt32* indexPtr;
-    
     void initializeShape(const string& shapeType, float shapeRadius);
     void intializeShader(const string& objectTag);
     
